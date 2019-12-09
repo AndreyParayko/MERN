@@ -1,0 +1,250 @@
+{
+	"info": {
+		"_postman_id": "fa17c8c0-8a99-4ba6-8456-40ab30963103",
+		"name": "Profiles",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create and update profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWRkNDE0NDA0MWQ2ZjgyYjZjZjVhMzVlIn0sImlhdCI6MTU3NTkwOTg3NiwiZXhwIjoxNTc2MjY5ODc2fQ.3T8_G3MjyZrJVpVQR8WdebUvhCtgSR4Zt7xaqEVT4jM",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"status\" : \"Student\",\n\t\"skills\": \"JS, Python\",\n\t\"company\" : \"Bizico\",\n\t\"location\" : \"Ukraine\",\n\t\"bio\" : \"vbsacvsavas\",\n\t\"githubusername\" : \"AndreyParayko\",\n\t\"website\" : \"https://google.com\",\n\t\"twitter\" : \"t\",\n\t\"facebook\" : \"f\",\n\t\"youtube\" : \"i\"\n }"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get logged in users profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWRkNDE0NDA0MWQ2ZjgyYjZjZjVhMzVlIn0sImlhdCI6MTU3NTcyMjA0MSwiZXhwIjoxNTc2MDgyMDQxfQ.0urCU1LMm60Mi_1GD3jCLu2L2z5PAgJ_QcvNIBIDY3o",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/profile/me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all profiles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get profile by user ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/profile/user/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add experience to profile",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWRlZThiNDViYzFmYzExZTRjZmFjNTUwIn0sImlhdCI6MTU3NTkxNTUwOSwiZXhwIjoxNTc2Mjc1NTA5fQ.PLza86VAFFu2UZg4sssCUhv-1re1IXEpD7bgsM-Ftpo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\" : \"csaca\",\n\t\"company\" : \"saa\",\n\t\"location\" : \"sas\",\n\t\"from\" : \"9-10-2010\",\n\t\"current\" : \"true\",\n\t\"description\" : \"sfsafsa\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/profile/experience",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"experience"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add education to profile",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "x-auth-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWRlZThiNDViYzFmYzExZTRjZmFjNTUwIn0sImlhdCI6MTU3NTkxNTUwOSwiZXhwIjoxNTc2Mjc1NTA5fQ.PLza86VAFFu2UZg4sssCUhv-1re1IXEpD7bgsM-Ftpo"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"school\" : \"csaca\",\n\t\"degree\" : \"saa\",\n\t\"fieldofstudy\" : \"sas\",\n\t\"from\" : \"9-10-2010\",\n\t\"current\" : \"true\",\n\t\"description\" : \"sfsafsa\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/profile/education",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"education"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete profile exp",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWRlZThiNDViYzFmYzExZTRjZmFjNTUwIn0sImlhdCI6MTU3NTkxNjY0MywiZXhwIjoxNTc2Mjc2NjQzfQ.VDc0K2g5cV2IXGvRJpU8MzYDBLBSabRt-NtVZhpny0I",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/profile/experience/5dee920cca045a27dc168ee9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"experience",
+						"5dee920cca045a27dc168ee9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete profile edu",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWRlZThiNDViYzFmYzExZTRjZmFjNTUwIn0sImlhdCI6MTU3NTkxNjY0MywiZXhwIjoxNTc2Mjc2NjQzfQ.VDc0K2g5cV2IXGvRJpU8MzYDBLBSabRt-NtVZhpny0I",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/profile/experience/5dee920cca045a27dc168ee9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"experience",
+						"5dee920cca045a27dc168ee9"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
