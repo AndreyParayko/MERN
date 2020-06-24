@@ -21,7 +21,7 @@ export const Register = ({ setAlert, register, isAuthenticated }) => {
   const onSubmit = async (e) => {
     e.preventDefault();
     if (password !== password2) {
-      setAlert("Passwords not match", "danger");
+      setAlert("Паролі не співпадають", "danger");
     } else {
       register({ name, email, password });
     }
@@ -34,12 +34,12 @@ export const Register = ({ setAlert, register, isAuthenticated }) => {
   return (
     <Fragment>
       {" "}
-      <h1 className='large text-primary'>Sign Up</h1>
+      <h1 className='large text-primary'>Зареєструватись</h1>
       <form className='form' onSubmit={(e) => onSubmit(e)}>
         <div className='form-group'>
           <input
             type='text'
-            placeholder='Name'
+            placeholder='Ім`я'
             name='name'
             value={name}
             onChange={(e) => onChange(e)}
@@ -48,7 +48,7 @@ export const Register = ({ setAlert, register, isAuthenticated }) => {
         <div className='form-group'>
           <input
             type='email'
-            placeholder='Email Address'
+            placeholder='Імейл'
             name='email'
             value={email}
             onChange={(e) => onChange(e)}
@@ -57,7 +57,7 @@ export const Register = ({ setAlert, register, isAuthenticated }) => {
         <div className='form-group'>
           <input
             type='password'
-            placeholder='Password'
+            placeholder='Пароль'
             name='password'
             value={password}
             onChange={(e) => onChange(e)}
@@ -66,16 +66,20 @@ export const Register = ({ setAlert, register, isAuthenticated }) => {
         <div className='form-group'>
           <input
             type='password'
-            placeholder='Confirm Password'
+            placeholder='Підтвердження паролю'
             name='password2'
             value={password2}
             onChange={(e) => onChange(e)}
           />
         </div>
-        <input type='submit' className='btn btn-primary' value='Register' />
+        <input
+          type='submit'
+          className='btn btn-primary'
+          value='Зареєструватись'
+        />
       </form>
       <p className='my-1'>
-        Already have an account? <Link to='/register'>Sign In</Link>
+        Уже зареєстровані? <Link to='/register'>Увійти</Link>
       </p>
     </Fragment>
   );

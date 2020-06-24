@@ -8,15 +8,21 @@ export const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
     <ul>
       <li>
+        <Link to='/profiles'>Юзери</Link>
+      </li>
+      <li>
+        <Link to='/posts'>Публікації</Link>
+      </li>
+      <li>
         <Link to='/dashboard'>
           <i className='fas fa-user' />{" "}
-          <span className='hide-sm'>Dashboard</span>
+          <span className='hide-sm'>Панель управління</span>
         </Link>
       </li>
       <li>
         <a onClick={logout} href='#!'>
           <i className='fas fa-sign-out-alt' />{" "}
-          <span className='hide-sm'>Logout</span>
+          <span className='hide-sm'>Вийти</span>
         </a>
       </li>
     </ul>
@@ -25,10 +31,13 @@ export const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const guestLinks = (
     <ul>
       <li>
-        <Link to='/register'>Register</Link>
+        <Link to='/profiles'>Юзери</Link>
       </li>
       <li>
-        <Link to='/login'>Login</Link>
+        <Link to='/register'>Реєстрація</Link>
+      </li>
+      <li>
+        <Link to='/login'>Увійти</Link>
       </li>
     </ul>
   );
@@ -37,7 +46,8 @@ export const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
     <nav className='navbar bg-dark'>
       <h1>
         <Link to='/'>
-          <i className='fab fa-node'></i> + <i className='fab fa-react'></i> SN
+          <i className='fab fa-node'></i> CODDER_CV{" "}
+          <i className='fab fa-react'></i>{" "}
         </Link>
       </h1>
       {!loading && (
